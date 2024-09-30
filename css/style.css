@@ -1,0 +1,266 @@
+@import '../css/variable.css';
+@import '../css/reset.css';
+
+
+
+.logo img {
+    width: 220px;
+}
+
+.profile-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    padding: 3px;
+    border: 1px solid var(--white-dark-color);
+}
+
+.notification {
+    width: calc(100% - 50px);
+    max-height: 250px;
+    background-color: var(--dark-blue-color);
+    color: var(--white-color);
+    padding: 15px;
+    position: absolute;
+    bottom: 25px;
+    left: 25px;
+    transform: translateX(-110%);
+    transition: .3s linear;
+    transition-delay: 1s;
+    z-index: 4;
+}
+
+.notification.active {
+    transform: translateX(0);
+}
+
+.box {
+    padding: 16px 12px;
+    border-radius: 6px;
+    background-color: var(--sky-blue-color2);
+    width: 130px;
+    background-color: var(--white-color);
+    box-shadow: var(--shadow-1);
+}
+
+
+/*********************
+****  Login Page  ****
+**********************/
+.login-area {
+    height: 100%;
+}
+
+
+.password-field {
+    position: relative;
+}
+
+.password-field button {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}
+
+.password-field button i {
+    color: var(--dark-blue-color);
+}
+
+.login-area .forgot {
+    text-decoration: underline !important;
+    color: var(--gray-color);
+}
+
+
+/* error text */
+.error.active {
+    visibility: hidden;
+}
+
+
+
+
+
+
+/*********************
+****  Home Page  ****
+**********************/
+.home .container {
+    background-color: var(--white-off-color);
+}
+
+.home-page .logo img {
+    width: 200px;
+}
+
+.home-page .right .sub-title {
+    width: 100%;
+}
+
+
+
+.reload-btn i {
+    animation: rotate 2s linear infinite;
+}
+
+/* Keyframes for infinite rotation */
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* profile data */
+.profile-data .border-left {
+    border-left: 2px solid var(--orange-color);
+    padding-left: 5px;
+    margin-top: 5px;
+    padding-bottom: 3px;
+}
+
+.profile-data .left {
+    width: 60%;
+}
+
+
+
+/* table */
+.table-wrapper {
+    padding: 10px;
+    /* background-color: var(--white-color);
+    box-shadow: var(--shadow-1); */
+    /* background-color: var(--sky-blue-color2); */
+}
+
+table {
+    border-collapse: collapse;
+    /* border: 1px solid var(--dark-blue-color); */
+    max-width: 500px;
+    overflow-x: auto;
+    margin: 0 auto;
+}
+
+th {
+    text-align: left;
+    color: var(--dark-blue-color);
+    font-weight: var(--fw-600);
+}
+
+tr {
+    border-bottom: 1px solid var(--green-color);
+    padding: 3px 0;
+}
+
+th,
+td {
+    padding: 6px 8px;
+    /* border: 1px solid var(--white-dark-color); */
+    font-size: var(--fs-xs);
+    vertical-align: top;
+}
+
+td {
+    text-align: left;
+    font-size: var(--fs-xs);
+    color: var(--green-color);
+    font-weight: var(--fw-500);
+}
+
+
+
+
+
+
+/* Footer  */
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    border-bottom-left-radius: 45px;
+    border-bottom-right-radius: 45px;
+    width: 100%;
+    background-color: var(--dark-blue-color);
+    padding: 20px 30px;
+    color: var(--white-color);
+}
+
+
+.footer .right-btn {
+    width: 45px;
+    height: 38px;
+    padding: 4px;
+    border-radius: 4px;
+    background-color: var(--sky-blue-color2);
+}
+
+
+
+
+
+/*********************
+****  Menu Page  ****
+**********************/
+.menu-page .container {
+    padding: 20px 0;
+}
+
+
+/* head */
+.menu-page .head {
+    position: fixed;
+    top: -20px;
+    left: 0PX;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    z-index: 5;
+    background-color: var(--white-off-color);
+    border-top-right-radius: 45px;
+    border-top-left-radius: 45px;
+    padding: 0 20px;
+}
+
+
+/* page body */
+.page-body {
+    margin-top: 100px;
+    overflow: auto;
+    height: calc(100vh - 200px);
+    padding-bottom: 70px;
+}
+
+.box-wrapper {
+    padding: 15px;
+    border-radius: 12px;
+    border: 1px solid var(--white-off-color);
+    box-shadow: var(--shadow-1);
+    background-color: var(--white-color);
+    margin: 0px 5px;
+}
+
+.page-body::-webkit-scrollbar {
+    display: none;
+}
+
+.box-wrapper .box {
+    /* border: 1px solid var(--white-dark-color); */
+    border-radius: 8px;
+    background-color: var(--white-off-color);
+    max-width: 110px;
+    cursor: pointer;
+}
+
+.box-wrapper .box .sub-title {
+    line-height: 16px;
+}
+
+.box-wrapper .box img {
+    width: 35px;
+}

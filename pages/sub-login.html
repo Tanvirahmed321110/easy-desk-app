@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sub_Login</title>
+        <link rel="stylesheet" href="../css/style.css">
+    </head>
+
+    <body>
+        <div class="container">
+
+            <div class="notification flex-center gap-10">
+                <img class="width-50" src="../image/checked.png" alt=""> Login Sucesfully
+            </div>
+
+            <div class="sub-login-area flex-center h-100">
+                <div class="w-100 ">
+                    <!-- Logo -->
+                    <div class="logo  flex-center">
+                        <img class="w-50" src="https://uniflexlimited.com/wp-content/uploads/2024/05/Untitled-1-2.png"
+                            alt="">
+                    </div>
+
+                    <!-- Sign in Form -->
+                    <div class="sign-in mt-50 text-left">
+                        <div class="title text-center">Secure Login </div>
+
+                        <form action="#" class="mt-0">
+
+                            <!-- password field -->
+                            <div class="password-field flex-between ">
+                                <input id="password-input" maxlength="6" oninput="errorTextClose()"
+                                    class="input-control mt-3 " type="password" placeholder="***********">
+                                <button onclick="showHidePassword(this)"><i class="ri-eye-off-line"></i></button>
+                            </div>
+
+                            <!-- error -->
+                            <div class="flex-between text-right mt-1 px-2">
+                                <div class="error  fs-xs  green-color">Pin must be 6 digit</div>
+                                <div class="fs-xs gray-color text-right"><span id="count-text">6</span>/6</div>
+                            </div>
+
+                            <!-- Sign In Button -->
+                            <button id="login-btn" disabled type="button"
+                                class="btn w-100 mt-4 disable fw-bold uppercase"
+                                onclick="window.location.href='./home.html'">
+                                Login In
+                            </button>
+
+
+                            <div class="text-right mt-4">
+                                <a href="../login.html" class="fs-xs gray-color underline">
+                                    another account sign-in
+                                </a>
+                            </div>
+
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+        <script src="../app.js"></script>
+    </body>
+
+</html>

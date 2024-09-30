@@ -1,0 +1,49 @@
+/* Font Cnd */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Remix icon cnd */
+@import url('https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css');
+
+:root {
+    /*______  Color  ______ */
+    --dark-color: #362f2f;
+    --gray-color: #808080;
+    --green-color: #5EA03C;
+    --white-color: #fff;
+    --white-off-color: #f4f1f1;
+    --white-dark-color: #e9d6d6;
+    --sky-blue-color: #89D1F0;
+    --sky-blue-color2: #89d1f0ae;
+    --bright-green-color: #8DC640;
+    --orange-color: #F69220;
+    --dark-blue-color: #0c84c5;
+
+
+    /*______  Font Size  ______ */
+    --fs-xs: 12px;
+    --fs-sm: 15px;
+    --fs-md: 16px;
+    --fs-lg: 18px;
+    --fs-xl: 20px;
+    --fs-xxl: 24px;
+    --fs-xxxl: 28px;
+
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    /*______  Font Weight  ______ */
+    --fw-400: 400;
+    --fw-500: 500;
+    --fw-600: 600;
+    --fw-700: 700;
+
+
+    --font-montserrat: "Montserrat",
+        system-ui;
+
+
+
+    /* shadow */
+    --shadow-1: 0 2px 3px rgba(0, 0, 0, .04);
+    --shadow-2: 0 2px 5px rgba(0, 0, 0, .07);
+
+}

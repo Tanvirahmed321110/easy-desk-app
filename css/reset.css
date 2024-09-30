@@ -1,0 +1,483 @@
+@import '../css/variable.css';
+
+
+/*________  Reset Code  ________ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/*________  Tag Style  ________ */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-size: var(--fs-sm);
+    font-family: var(--font-montserrat);
+    height: 100dvh;
+    height: 680px;
+    width: 420px;
+    background-color: var(--white-dark-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 45px;
+    overflow: hidden;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+    color: inherit;
+    transition: .2s ease-in-out;
+}
+
+a:active,
+button:active {
+    transform: translateY(-3px);
+}
+
+
+p {
+    font-size: var(--fs-md);
+    line-height: 28px;
+}
+
+img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+
+input,
+textarea {
+    width: 100%;
+    font-size: var(--fs-md);
+    border: none;
+    outline: none;
+}
+
+button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: transparent;
+    color: inherit;
+    font-size: inherit;
+    word-spacing: 3px;
+    transition: .2s ease-in-out;
+}
+
+
+
+h2 {
+    font-size: var(--fs-xl);
+    font-weight: var(--fw-600);
+}
+
+
+
+
+/*____________  Reused Class  ____________*/
+.container {
+    padding: 20px 15px;
+    margin: 0 auto;
+    border-radius: 45px;
+    background-color: white;
+    box-shadow: 2px 4px 12px rgb(181, 179, 179);
+    height: 680px;
+    width: 420px;
+    /* overflow: auto;
+    overflow-y: auto; */
+    position: relative;
+    overflow: hidden;
+}
+
+
+
+
+/*_____  Text Alignment _____ */
+.text-center {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+
+/*_____ Title  _____*/
+.title {
+    font-size: var(--fs-xl);
+    font-weight: var(--fw-700);
+    line-height: 27px;
+    letter-spacing: .3px;
+    color: var(--dark-blue-color);
+}
+
+.sub-title {
+    font-size: var(--fs-md);
+    font-weight: var(--fw-600);
+    line-height: 20px;
+    letter-spacing: .3px;
+    color: var(--dark-blue-color);
+}
+
+.input-control {
+    padding: 12px 15px;
+    border-radius: 20px;
+    background-color: var(--white-off-color);
+    color: var(--dark-color);
+    letter-spacing: .15px;
+}
+
+.input-control::placeholder {
+    color: var(--gray-color);
+    opacity: .5;
+}
+
+/* height */
+.h-100 {
+    height: 100%;
+}
+
+/* Width */
+.w-100 {
+    width: 100%;
+}
+
+.w-50 {
+    width: 50%;
+}
+
+.w-25 {
+    width: 25%;
+}
+
+.width-50 {
+    width: 50px;
+}
+
+
+
+.text-nowrap {
+    text-wrap: nowrap;
+}
+
+
+
+/*______  Button  ______*/
+.btn {
+    cursor: pointer;
+    padding: 12px;
+    border-radius: 24px;
+    background-color: var(--dark-blue-color);
+    color: var(--white-color);
+    font-family: inherit;
+}
+
+.btn.disable {
+    opacity: .4;
+}
+
+
+
+
+
+/*______  Display  ______*/
+.d-none {
+    display: none;
+}
+
+.d-grid {
+    display: grid;
+}
+
+.d-block {
+    display: block;
+}
+
+.d-inline-block {
+    display: inline-block;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+
+/*_____ Font Weight  _____*/
+.fw-normal {
+    font-weight: var(fw-400);
+}
+
+.fw-medium {
+    font-weight: var(--fw-500);
+}
+
+.fw-bold {
+    font-weight: var(--fw-600);
+}
+
+.fw-bolder {
+    font-weight: var(--fw-700);
+}
+
+
+/*_____  color  _____*/
+.white-color {
+    color: var(--white-color);
+}
+
+.dark-dark {
+    color: var(--dark-color);
+}
+
+.white-off {
+    color: var(--white-off);
+}
+
+.color-white {
+    color: var(--white-color);
+}
+
+.gray-color {
+    color: var(--gray-color)
+}
+
+.sky-blue-color {
+    color: var(--sky-blue-color);
+}
+
+.blue-color {
+    color: var(--dark-blue-color);
+}
+
+.orange-color {
+    color: var(--orange-color);
+}
+
+.green-color {
+    color: var(--green-color);
+}
+
+
+/*_____  Padding  _____*/
+.p-1 {
+    padding: 5;
+}
+
+.pl-2 {
+    padding-left: 10px;
+}
+
+.pr-2 {
+    padding-right: 10px;
+}
+
+.p-2 {
+    padding: 10px;
+}
+
+.px-2 {
+    padding: 0 10px;
+}
+
+
+/*_____  Margin  _____*/
+.mt-n-1 {
+    margin-top: -3px;
+}
+
+.mt-1 {
+    margin-top: 5px;
+}
+
+.mt-2 {
+    margin-top: 10px;
+}
+
+.mt-3 {
+    margin-top: 15px;
+}
+
+.mt-4 {
+    margin-top: 20px;
+}
+
+.mt-5 {
+    margin-top: 25px;
+}
+
+.mt-6 {
+    margin-top: 30px;
+}
+
+.mt-7 {
+    margin-top: 36px;
+}
+
+.mt-50 {
+    margin-top: 50px;
+}
+
+.my-50 {
+    margin: 50px 0;
+}
+
+.my-4 {
+    margin: 20px 0;
+}
+
+.mr-1 {
+    margin-right: 4px;
+}
+
+/*  Font Class  */
+.fs-xs {
+    font-size: var(--fs-xs);
+}
+
+.fs-sm {
+    font-size: var(--fs-sm);
+}
+
+.fs-md {
+    font-size: var(--fs-md);
+}
+
+.fs-lg {
+    font-size: var(--fs-lg);
+}
+
+.fs-xl {
+    font-size: var(--fs-xl);
+}
+
+.fs-xxl {
+    font-size: var(--fs-xxl);
+}
+
+
+
+/*______  Flex  ______*/
+.d-flex,
+.flex-center,
+.flex-between,
+.align-center,
+.align-start,
+.flex-column,
+.justify-start,
+.flex-start {
+    display: flex;
+}
+
+.flex-center {
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-between {
+    align-items: center;
+    justify-content: space-between;
+}
+
+.flex-start {
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.align-start {
+    align-items: flex-start;
+}
+
+.align-end {
+    align-items: flex-end;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.justify-start {
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.justify-end {
+    align-items: center;
+    justify-content: flex-end;
+}
+
+/* Gap */
+.gap-5 {
+    gap: 5px;
+}
+
+.gap-10 {
+    gap: 10px;
+}
+
+.gap-15 {
+    gap: 15px;
+}
+
+.gap-20 {
+    gap: 20px;
+}
+
+.gap-25 {
+    gap: 25px;
+}
+
+.gap-30 {
+    gap: 35px;
+}
+
+.gap-35 {
+    gap: 40px;
+}
+
+
+/*_____  Grid  _____*/
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
