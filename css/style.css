@@ -38,7 +38,10 @@
     padding: 16px 12px;
     border-radius: 6px;
     background-color: var(--sky-blue-color2);
-    width: 130px;
+    width: 100%;
+    min-width: 100px;
+    max-width: 130px;
+
     background-color: var(--white-color);
     box-shadow: var(--shadow-1);
 }
@@ -86,7 +89,7 @@
 ****  Home Page  ****
 **********************/
 .home .container {
-    background-color: var(--white-off-color);
+    background-color: var(--white-color);
 }
 
 .home .right {
@@ -97,6 +100,10 @@
     width: 200px;
 }
 
+.home-page .box {
+    border: 1px solid var(--white-off-color);
+    box-shadow: var(--shadow-2);
+}
 
 
 .reload-btn i {
@@ -216,7 +223,7 @@ td {
 /* head */
 .head {
     position: fixed;
-    top: 0px;
+    top: -20px;
     left: 0PX;
     width: 100%;
     height: 100px;
@@ -235,17 +242,17 @@ td {
     margin-top: 100px;
     overflow: auto;
     height: calc(100vh - 200px);
-    padding-bottom: 50px;
+    padding-bottom: 60px;
 }
 
 /* box wrapper */
 .box-wrapper {
-    padding: 15px;
+    padding: 20px 15px;
     border-radius: 12px;
     border: 1px solid var(--white-off-color);
     box-shadow: var(--shadow-1);
     background-color: var(--white-color);
-    margin: 0px 6px;
+    margin: 0px 7px;
 }
 
 .page-body::-webkit-scrollbar {
@@ -313,4 +320,26 @@ td {
 .data-table table thead tr:first-child th,
 .data-table table tbody tr:first-child td {
     padding-left: 0;
+}
+
+
+
+.submit-issue .input-control {
+    background-color: var(--white-off-color);
+}
+
+.input-num {
+    position: relative;
+
+}
+
+.input-num .input-control {
+    padding-left: 54px;
+}
+
+.input-num .number {
+    position: absolute;
+    left: 10px;
+    top: 15px;
+    color: var(--gray-color);
 }
