@@ -12,18 +12,126 @@
         <div class="container">
 
             <!-- Header -->
-            <div class="head bg-blue d-flex gap-20">
+            <!-- <div class="head bg-blue d-flex gap-20">
                 <a class="right-btn flex-center" href="../menu.html"><i
                         class="ri-arrow-left-s-fill fs-xxl white-color"></i></a>
                 <input class="input-control" type="text" placeholder="Enter Customer ID">
+            </div> -->
+
+            <!-- head -->
+            <div class="d-flex head flex-between align-start gap-25 mt-4">
+                <!-- Logo -->
+                <div class="logo">
+                    <img class="w-50" src="https://uniflexlimited.com/wp-content/uploads/2024/05/Untitled-1-2.png"
+                        alt="">
+                </div>
+
+                <div class="right text-right">
+                    <div class="title text-right">
+                        Search
+                    </div>
+                    <div class="date  fs-xs blue-color" id="date">29 sep 2024</div>
+                </div>
+            </div>
+
+            <!-- Header -->
+            <div class="d-flex mt-140 gap-20 px-2">
+                <input class="border input-control" id="customer-id-input" type="text" placeholder="Enter  ID">
             </div>
 
 
-            <!-- search data -->
-            <div class="search-data">
+            <!-- Tab Buttons -->
+            <div class="flex-between tab-buttons mt-4 ">
+                <button class="tab-button active sub-title" data-target="team-table">
+                    My Team
+                </button>
+                <button class="tab-button sub-title" data-target="customer-table">
+                    My Customer
+                </button>
+            </div>
 
+
+            <!-- Team table -->
+            <div class=" mt-50">
+                <!-- team table -->
+                <div class="data-table active  px-2" id="data-table" data-target="team-table">
+                    <caption>
+                        <div class="sub-title fw-bolder">My Team</div>
+                    </caption>
+
+                    <table class="mt-2">
+                        <thead>
+                            <th>Name</th>
+                            <th>ID</th>
+                            <th>Land Details</th>
+                            <th>Total Paid</th>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>Tanvir Ahmed</td>
+                                <td>324545</td>
+                                <td>2.2Er</td>
+                                <td class="d-flex align-center gap-5">
+                                    <i class="fa-solid fa-bangladeshi-taka-sign"></i>
+                                    <span>124000</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Customer table -->
+                <div class="data-table  px-2" data-target="customer-table">
+                    <caption>
+                        <div class="sub-title fw-bolder">My Customer</div>
+                    </caption>
+
+                    <table class="mt-2">
+                        <thead>
+                            <th>Name</th>
+                            <th>ID</th>
+                            <th>Land Details</th>
+                            <th>Total Paid</th>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>Tanvir Ahmed</td>
+                                <td>324545</td>
+                                <td>2.2Er</td>
+                                <td class="d-flex align-center gap-5">
+                                    <i class="fa-solid fa-bangladeshi-taka-sign"></i>
+                                    <span>124000</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+
+
+            <!-- Footer -->
+            <div class="footer flex-between">
+                <a href="../menu.html" class="right-btn flex-center">
+                    <i style="font-size: 40px;" class="ri-arrow-left-s-fill "></i>
+                </a>
+
+                <a href="../home.html" class="left right-btn  uppercase flex-center gap-5">
+                    <!-- <i class="ri-home-5-line fs-xl"></i> -->
+                    <img style="width: 25px;" src="../../image/home-button.png" alt="">
+
+                </a>
+
+                <a href="./menu.html" class="right-btn flex-center">
+                    <i style="font-size: 40px;" class="ri-arrow-right-s-fill"></i>
+                </a>
             </div>
         </div>
+
+
+        <script src="../../app.js"></script>
     </body>
 
 </html>

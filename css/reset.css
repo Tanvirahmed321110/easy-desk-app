@@ -18,7 +18,10 @@ body {
     font-size: var(--fs-sm);
     font-family: var(--font-montserrat);
     height: 97dvh;
-    width: 420px;
+    min-width: 310px;
+    width: 98%;
+    margin: 0 auto;
+    max-width: 470px;
     background-color: var(--white-dark-color);
     display: flex;
     align-items: center;
@@ -30,7 +33,6 @@ body {
     transform: translate(-50%, -50%);
     border-radius: 45px;
     overflow: hidden;
-    margin-top: -5px;
     z-index: 12;
 }
 
@@ -95,13 +97,15 @@ h2 {
 
 /*____________  Reused Class  ____________*/
 .container {
-    padding: 20px 15px;
+    padding: 20px 16px;
     margin: 0px auto;
     border-radius: 45px;
     background-color: white;
     box-shadow: 2px 4px 12px rgb(181, 179, 179);
     height: 100%;
-    width: 420px;
+    max-width: 470px;
+    width: 100%;
+    min-width: 310px;
     position: relative;
     overflow: hidden;
 }
@@ -142,11 +146,15 @@ h2 {
 }
 
 .input-control {
-    padding: 12px 15px;
-    border-radius: 20px;
+    padding: 15px;
+    border-radius: 24px;
     background-color: var(--white-off-color);
     color: var(--dark-color);
     letter-spacing: .15px;
+}
+
+.border {
+    border: 1px solid var(--white-dark-color);
 }
 
 .input-control::placeholder {
@@ -187,7 +195,7 @@ h2 {
 /*______  Button  ______*/
 .btn {
     cursor: pointer;
-    padding: 12px;
+    padding: 15px;
     border-radius: 24px;
     background-color: var(--dark-blue-color);
     color: var(--white-color);
@@ -288,6 +296,10 @@ h2 {
     background-color: var(--dark-blue-color) !important;
 }
 
+.bg-sky-blue {
+    background-color: var(--sky-blue-color) !important;
+}
+
 /*_____  Padding  _____*/
 .p-1 {
     padding: 5;
@@ -351,6 +363,14 @@ h2 {
     margin: 50px 0;
 }
 
+.mt-100 {
+    margin-top: 100px;
+}
+
+.mt-140 {
+    margin-top: 140px;
+}
+
 .my-4 {
     margin: 20px 0;
 }
@@ -382,6 +402,10 @@ h2 {
 
 .fs-xxl {
     font-size: var(--fs-xxl);
+}
+
+.fs-xxxl {
+    font-size: var(--fs-xxxl);
 }
 
 
@@ -438,6 +462,11 @@ h2 {
     align-items: center;
     justify-content: flex-end;
 }
+
+.flex-1 {
+    flex-grow: 1;
+}
+
 
 /* Gap */
 .gap-5 {

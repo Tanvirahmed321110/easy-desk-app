@@ -89,12 +89,12 @@
     background-color: var(--white-off-color);
 }
 
-.home-page .logo img {
-    width: 200px;
+.home .right {
+    width: 180px;
 }
 
-.home-page .right .sub-title {
-    width: 100%;
+.home-page .logo img {
+    width: 200px;
 }
 
 
@@ -127,11 +127,14 @@
     width: 60%;
 }
 
+.profile-data .right.flex-column {
+    width: fit-content;
+}
 
 
 /* table */
 .table-wrapper {
-    padding: 10px;
+    /* padding: 10px; */
     /* background-color: var(--white-color);
     box-shadow: var(--shadow-1); */
     /* background-color: var(--sky-blue-color2); */
@@ -141,6 +144,7 @@ table {
     border-collapse: collapse;
     /* border: 1px solid var(--dark-blue-color); */
     max-width: 500px;
+    width: 100%;
     overflow-x: auto;
     margin: 0 auto;
 }
@@ -158,7 +162,7 @@ tr {
 
 th,
 td {
-    padding: 6px 8px;
+    padding: 7px 8px;
     /* border: 1px solid var(--white-dark-color); */
     font-size: var(--fs-xs);
     vertical-align: top;
@@ -189,16 +193,15 @@ td {
     color: var(--white-color);
 }
 
-
+.right-btn,
 .footer .right-btn,
 .head .right-btn {
     width: 45px;
-    height: 38px;
+    height: 40px;
     padding: 4px;
     border-radius: 4px;
     background-color: var(--sky-blue-color2);
 }
-
 
 
 
@@ -263,4 +266,51 @@ td {
 
 .box-wrapper .box img {
     width: 35px;
+}
+
+
+
+
+
+
+
+/*********************
+****  Search Page  ****
+**********************/
+.tab-buttons {
+    display: flex;
+    align-items: stretch;
+    border: 1px solid var(--dark-blue-color);
+    margin: 20px 12px;
+}
+
+.tab-buttons .tab-button {
+    width: 50%;
+    text-align: center;
+    height: 100%;
+    padding: 10px;
+}
+
+
+.tab-buttons .tab-button:first-child {
+    border-right-width: 0px;
+}
+
+.tab-button.active {
+    background-color: var(--dark-blue-color);
+    color: var(--white-color);
+}
+
+.data-table {
+    display: none;
+}
+
+.data-table.active {
+    display: block;
+}
+
+
+.data-table table thead tr:first-child th,
+.data-table table tbody tr:first-child td {
+    padding-left: 0;
 }

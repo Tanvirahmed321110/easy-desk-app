@@ -43,12 +43,15 @@ function errorTextClose() {
 
 function date() {
     const dateTag = document.querySelector('#date')
-    const today = new Date()
 
-    const time = today.toLocaleDateString()
-    const formattedTime = time.replace(/\//g, '-');
+    if (dateTag) {
+        const today = new Date()
 
-    dateTag.innerText = formattedTime;
+        const time = today.toLocaleDateString()
+        const formattedTime = time.replace(/\//g, '-');
+
+        dateTag.innerText = formattedTime;
+    }
 }
 
 
@@ -65,3 +68,63 @@ window.onload = function () {
 
     date()
 }
+
+
+
+
+
+
+
+
+// show data table when user type input
+function showDataTable() {
+    const customerInput = document.getElementById('customer-id-input')
+
+    if (customerInput) {
+        const dataTable = document.getElementById('data-table')
+
+        customerInput.addEventListener('input', function () {
+            if (customerInput.value.trim() !== '') {
+                dataTable.classList.add('active')
+            }
+            else {
+                dataTable.classList.remove('active')
+            }
+        })
+    }
+}
+
+// showDataTable()
+
+
+
+
+function tabs() {
+    const tabButtons = document.querySelectorAll('.tab-button');
+
+    if (tabButtons) {
+        const tables = document.querySelectorAll('.data-table');
+
+        tabButtons.forEach(button => {
+            button.addEventListener('click', function () {
+                // Remove active class from all buttons
+                tabButtons.forEach(btn => btn.classList.remove('active'));
+                // Add active class to the clicked button
+                this.classList.add('active');
+
+                // Get the target data from the clicked button's data-target attribute
+                const targetData = this.getAttribute('data-target');
+
+                // Hide all tables and show the corresponding table
+                tables.forEach(table => {
+                    table.classList.remove('active');
+                    if (table.getAttribute('data-target') === targetData) {
+                        table.classList.add('active'); // Show the corresponding table
+                    }
+                });
+            });
+        });
+    }
+}
+
+tabs();
