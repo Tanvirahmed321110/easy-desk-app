@@ -4,7 +4,7 @@
 
 
 .logo img {
-    width: 220px;
+    width: 250px;
 }
 
 .profile-img {
@@ -35,7 +35,7 @@
 }
 
 .box {
-    padding: 16px 12px;
+    padding: 15px 13px;
     border-radius: 6px;
     background-color: var(--sky-blue-color2);
     width: 100%;
@@ -83,6 +83,14 @@
 
 
 
+/************************
+****  CHANGE PIN PAGE  ****
+*************************/
+.create-page .profile-data img {
+    width: 80px;
+    height: 80px;
+}
+
 
 
 /*********************
@@ -103,6 +111,8 @@
 .home-page .box {
     border: 1px solid var(--white-off-color);
     box-shadow: var(--shadow-2);
+    padding: 18px 15px;
+    border-radius: 12px;
 }
 
 
@@ -169,8 +179,7 @@ tr {
 
 th,
 td {
-    padding: 7px 8px;
-    /* border: 1px solid var(--white-dark-color); */
+    padding: 7px 13px;
     font-size: var(--fs-xs);
     vertical-align: top;
 }
@@ -237,6 +246,10 @@ td {
     padding: 0 20px;
 }
 
+.home-page .head {
+    height: 130px;
+}
+
 /* page body */
 .page-body {
     margin-top: 100px;
@@ -278,9 +291,6 @@ td {
 
 
 
-
-
-
 /*********************
 ****  Search Page  ****
 **********************/
@@ -288,7 +298,8 @@ td {
     display: flex;
     align-items: stretch;
     border: 1px solid var(--dark-blue-color);
-    margin: 20px 12px;
+    margin-left: 12px;
+    margin-right: 12px;
 }
 
 .tab-buttons .tab-button {
@@ -316,11 +327,20 @@ td {
     display: block;
 }
 
+.sub-table th,
+.sub-table td {
+    padding: 4px 0;
+}
 
+.table-wrapper th,
+.table-wrapper td,
+.sub-table th,
 .data-table table thead tr:first-child th,
 .data-table table tbody tr:first-child td {
     padding-left: 0;
 }
+
+
 
 
 
@@ -342,4 +362,33 @@ td {
     left: 10px;
     top: 15px;
     color: var(--gray-color);
+}
+
+
+
+
+
+/**************************
+****  My Profile Page  ****
+**************************/
+.myprofile-page .head {
+    padding: 5px;
+}
+
+.myprofile-page .head .right-btn {
+    background-color: transparent;
+}
+
+.myprofile-page .data li {
+    border-bottom: 1px solid var(--white-dark-color);
+    padding: 3px 0;
+    font-weight: var(--fw-400);
+    font-size: calc(var(--fs-xs) + 1px);
+}
+
+.myprofile-page .images img {
+    width: 85px;
+    height: 75px;
+    padding: 2px;
+    border: 1px solid var(--white-dark-color);
 }

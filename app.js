@@ -42,15 +42,18 @@ function errorTextClose() {
 
 
 function date() {
-    const dateTag = document.querySelector('#date')
+    const dateTag = document.querySelector('#date');
 
     if (dateTag) {
-        const today = new Date()
+        const today = new Date();
 
-        const time = today.toLocaleDateString()
-        const formattedTime = time.replace(/\//g, '-');
+        // Options for formatting the date
+        const options = { day: 'numeric', month: 'long', year: 'numeric' };
 
-        dateTag.innerText = formattedTime;
+        // Formatting the date in "20 January 2024" format
+        const formattedDate = today.toLocaleDateString('en-GB', options);
+
+        dateTag.innerText = formattedDate;
     }
 }
 

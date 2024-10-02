@@ -21,7 +21,7 @@ body {
     min-width: 310px;
     width: 98%;
     margin: 0 auto;
-    max-width: 470px;
+    max-width: 430px;
     background-color: var(--white-dark-color);
     display: flex;
     align-items: center;
@@ -34,6 +34,8 @@ body {
     border-radius: 45px;
     overflow: hidden;
     z-index: 12;
+    font-weight: var(--fw-500);
+    /* overflow-y: auto; */
 }
 
 ul {
@@ -114,11 +116,12 @@ h2 {
     background-color: white;
     box-shadow: 2px 4px 12px rgb(181, 179, 179);
     height: 100%;
-    max-width: 470px;
+    max-width: 430px;
     width: 100%;
     min-width: 310px;
     position: relative;
     overflow: hidden;
+    overflow-y: auto;
 }
 
 
@@ -157,7 +160,7 @@ h2 {
 }
 
 .input-control {
-    padding: 15px;
+    padding: 13px 20px;
     border-radius: 24px;
     background-color: var(--white-off-color);
     color: var(--dark-blue-color);
@@ -201,6 +204,18 @@ h2 {
     text-wrap: nowrap;
 }
 
+.text-wrap {
+    text-wrap: wrap !important;
+}
+
+.overflow-x {
+    overflow-x: auto;
+}
+
+.table-overfleow {
+    overflow-x: auto;
+    width: 100%;
+}
 
 
 /*______  Button  ______*/
@@ -336,10 +351,23 @@ h2 {
     padding: 0 10px;
 }
 
+.px-3 {
+    padding: 0 15px;
+}
+
+
+.py-4 {
+    padding: 20px 0;
+}
+
 
 /*_____  Margin  _____*/
 .mt-n-1 {
     margin-top: -3px;
+}
+
+.mt-0 {
+    margin-top: 0 !important;
 }
 
 .mt-1 {
@@ -526,9 +554,41 @@ h2 {
 .grid-3 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    row-gap: 20px;
 }
 
 .grid-4 {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+}
+
+.row-30 {
+    row-gap: 30px;
+}
+
+
+
+/* _____  Scrollbar  _____ */
+.has-scrollbar {
+    padding: 5px;
+}
+
+.has-scrollbar::-webkit-scrollbar {
+    width: 10px;
+    /* for vertical scroll */
+    height: 10px;
+}
+
+.has-scrollbar::-webkit-scrollbar-thumb {
+    background: transparent;
+    border: 3px solid var(--white);
+    border-radius: 20px;
+}
+
+.has-scrollbar:hover::-webkit-scrollbar-thumb {
+    background: hsl(0, 5%, 81%);
+}
+
+.has-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: hsl(0, 4%, 67%);
 }

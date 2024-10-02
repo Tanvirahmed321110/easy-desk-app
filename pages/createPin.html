@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Create Password</title>
+        <link rel="stylesheet" href="../css/style.css">
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="login-area create-page  flex-center">
+
+                <div class="w-100 py-4">
+                    <!-- Logo -->
+                    <div class="logo  flex-center">
+                        <img class="w-50" src="https://uniflexlimited.com/wp-content/uploads/2024/05/Untitled-1-2.png"
+                            alt="">
+                    </div>
+
+
+                    <!-- profile -->
+                    <div class="profile-data w-100 px-2  mt-50 flex-between gap-15">
+                        <!-- Left -->
+                        <img src="https://img.freepik.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg"
+                            alt="" class="profile-img">
+
+                        <div class="mt-2 flex-column gap-5 w-100">
+                            <div class="name  title">Md Tanvir Ahmed</div>
+                            <div class="post  blue-color fs-sm mt-n-1">General Manager</div>
+                        </div>
+                    </div>
+
+                    <!-- Sign in Form -->
+                    <div class="sign-in mt-50 text-left">
+                        <div class="title fs-xxl text-left">Set New PIN</div>
+
+                        <form action="#" class="mt-0">
+
+                            <!-- password field -->
+                            <div class="password-field flex-between ">
+                                <input id="password-input" maxlength="6" oninput="errorTextClose()"
+                                    class="input-control mt-3 " type="number" placeholder="New PIN">
+                            </div>
+                            <!-- error -->
+                            <div class="flex-between text-right mt-1 px-2">
+                                <div class="error  fs-xs  green-color"> </div>
+                                <div class="fs-xs gray-color text-right"><span id="count-text">6</span>/6</div>
+                            </div>
+
+                            <!-- confirm -->
+                            <div class="password-field flex-between ">
+                                <input id="password-input" maxlength="6" oninput="errorTextClose()"
+                                    class="input-control mt-3 " type="number" placeholder="Confirm PIN">
+                            </div>
+
+                            <!-- error -->
+                            <div class="flex-between text-right mt-1 px-2">
+                                <div class="error  fs-xs  green-color"></div>
+                                <div class="fs-xs gray-color text-right"><span id="count-text">6</span>/6</div>
+                            </div>
+
+                            <!-- Sign In Button -->
+                            <button id="login-btn" type="button" onclick="window.location.href='./sub-login.html'"
+                                class="btn w-100 mt-4  fw-bold uppercase">
+                                SAVE
+                            </button>
+
+
+                            <div class=" text-right mt-4">
+                                <a href="../login.html" class="fs-sm gray-color underline">
+                                    back to sign-in
+                                </a>
+                            </div>
+
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <script src="app.js"></script>
+    </body>
+
+</html>
