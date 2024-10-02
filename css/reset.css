@@ -330,6 +330,10 @@ h2 {
     background-color: var(--white-color);
 }
 
+.bg-transfraent {
+    background-color: transparent !important;
+}
+
 /*_____  Padding  _____*/
 .p-1 {
     padding: 5;
@@ -420,6 +424,10 @@ h2 {
 
 .mr-1 {
     margin-right: 4px;
+}
+
+.ml-2 {
+    margin-left: 10px;
 }
 
 /*  Font Class  */
