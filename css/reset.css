@@ -198,6 +198,9 @@ h2 {
     width: 50px;
 }
 
+.fit-content {
+    width: fit-content;
+}
 
 
 .text-nowrap {
@@ -335,6 +338,10 @@ h2 {
 }
 
 /*_____  Padding  _____*/
+.p-0 {
+    padding: 0;
+}
+
 .p-1 {
     padding: 5;
 }
@@ -410,6 +417,10 @@ h2 {
     margin: 50px 0;
 }
 
+.mx-4 {
+    margin: 0 20px !important;
+}
+
 .mt-100 {
     margin-top: 100px;
 }
@@ -418,12 +429,20 @@ h2 {
     margin-top: 140px;
 }
 
+.mb-2 {
+    margin-bottom: 10px;
+}
+
 .my-4 {
     margin: 20px 0;
 }
 
 .mr-1 {
     margin-right: 4px;
+}
+
+.ml-1 {
+    margin-left: 5px;
 }
 
 .ml-2 {
@@ -459,6 +478,29 @@ h2 {
     font-size: var(--fs-xxxl);
 }
 
+/* letter space */
+.letter-space-1 {
+    letter-spacing: .5px;
+}
+
+
+
+/* border radius */
+.radius-sm {
+    border-radius: 6px;
+}
+
+.radius-md {
+    border-radius: 8px;
+}
+
+.radius-lg {
+    border-radius: 12px;
+}
+
+.radius-round {
+    border-radius: 50%;
+}
 
 
 /*______  Flex  ______*/

@@ -40,8 +40,7 @@
     background-color: var(--sky-blue-color2);
     width: 100%;
     min-width: 100px;
-    max-width: 130px;
-
+    max-width: 135px;
     background-color: var(--white-color);
     box-shadow: var(--shadow-1);
 }
@@ -359,8 +358,8 @@ td {
 
 .input-num .number {
     position: absolute;
-    left: 10px;
-    top: 15px;
+    left: 9px;
+    top: 13px;
     color: var(--gray-color);
 }
 
@@ -454,7 +453,9 @@ input:checked+.slider:before {
 
 
 
-
+/*************************
+****  Profile Update  ****
+*************************/
 .update-profile .input-wrapper {
     /* background-color: var(--white-off-color); */
     box-shadow: 0 4px 5px -1px rgba(0, 0, 0, 0.2);
@@ -464,4 +465,108 @@ input:checked+.slider:before {
 
 .input-wrapper .text-right .error {
     visibility: hidden;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 97vh;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 4;
+    border-radius: 45px;
+    transition: .2s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.modal.active {
+    display: flex;
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal.active .modal-content {
+    transition: .2s;
+    animation: rotateModal .6s linear .2s;
+}
+
+@keyframes rotateModal {
+    0% {
+        transform: rotate(0);
+        transform: scale(0);
+    }
+
+    50% {
+        transform: rotate(20deg);
+        transform: scale(1);
+    }
+
+    80% {
+        transform: rotate(-25deg);
+    }
+
+    0% {
+        transform: rotate(0);
+        transform: scale(0);
+    }
+}
+
+.modal-content {
+    background-color: var(--white-color);
+    padding: 15px;
+    width: 90%;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+
+
+
+
+
+
+.inquiry button {
+    box-shadow: var(--shadow-2);
+    height: 30px;
+    width: 30px;
+    padding: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border: 1px solid var(--dark-blue-color);
+}
+
+.account-inquiry .icon-area {
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    background-color: var(--sky-blue-color);
+    background-color: var(--orange-color);
+    color: var(--white-color);
+}
+
+.account-inquiry .single-tranjection {
+    padding: 14px 15px;
+    border-bottom: 1px solid var(--white-off-color);
+    box-shadow: var(--shadow-2);
+}
+
+.payment-method .single-payment {
+    padding: 10px 8px;
+
+}
+
+.payment-method .single-payment.active {
+    background-color: var(--white-off-color);
+}
+
+.payment-method {
+    margin: 25px 20px;
 }

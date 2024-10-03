@@ -131,3 +131,58 @@ function tabs() {
 }
 
 tabs();
+
+
+
+
+
+
+const ImageWrapper = document.querySelector('.image-wraper .flex-column');
+if (ImageWrapper) {
+    const imageBtns = ImageWrapper.querySelectorAll('.image');
+
+    // ImageWrapper.addEventListener('click', () => {
+    //     console.log('click')
+    // })
+
+    imageBtns.forEach(btn => {
+        btn.addEventListener('focus', () => {
+            modal.classList.add('active')
+        });
+    });
+}
+
+
+
+const modal = document.querySelector('.modal')
+if (modal) {
+    modal.addEventListener('click', () => {
+        const modalContent = modal.querySelector('.modal-content');
+        if (!modalContent.contains(event.target)) {
+            modal.classList.remove('active')
+        }
+    })
+
+
+    // search btn
+    const searchBtn = document.getElementById('search-btn')
+    if (searchBtn) {
+        searchBtn.addEventListener('click', function () {
+            modal.classList.add('active')
+        })
+    }
+}
+
+
+const paymentMethod = document.querySelector('.payment-method');
+if (paymentMethod) {
+    const paymentMethodItems = paymentMethod.querySelectorAll('.single-payment'); // Use querySelectorAll
+
+    paymentMethodItems.forEach(item => {
+        item.addEventListener('click', function () {
+            const checkbox = this.querySelector('input[type="checkbox"]'); // Get the checkbox inside the clicked item
+            checkbox.checked = !checkbox.checked; // Toggle the checked state
+            item.classList.toggle('active')
+        });
+    });
+}
