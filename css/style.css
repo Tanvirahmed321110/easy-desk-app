@@ -570,3 +570,40 @@ input:checked+.slider:before {
 .payment-method {
     margin: 25px 20px;
 }
+
+
+
+
+/**************************
+****  Business Tree page  ***
+**************************/
+.tree {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.business-profile {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: left;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    width: 180px;
+    background-color: #f9f9f9;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    text-decoration: none;
+    color: black;
+}
+
+.business-profile img {
+    border: 1px solid var(--white-dark-color);
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    padding: 2px;
+}

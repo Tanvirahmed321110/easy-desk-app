@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Business Tree Design</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                display: flex;
+                justify-content: center;
+                margin-top: 50px;
+            }
+
+            /* Tree container */
+            .tree {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+            }
+
+            /* Profile box */
+            .profile {
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                text-align: left;
+                padding: 10px;
+                border: 2px solid #ccc;
+                border-radius: 10px;
+                width: 180px;
+                background-color: #f9f9f9;
+                box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+                margin-bottom: 20px;
+                text-decoration: none;
+                color: black;
+            }
+
+            .profile img {
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                margin-right: 10px;
+                background-color: #ddd;
+                /* Placeholder background for image */
+            }
+
+            .name {
+                font-weight: bold;
+            }
+
+            .id {
+                font-size: 12px;
+                color: #777;
+            }
+
+            /* Connectors (lines between profiles) */
+            .line {
+                width: 2px;
+                height: 20px;
+                background-color: #ccc;
+                margin-bottom: 20px;
+            }
+
+            /* Flexbox for horizontal arrangement of child nodes */
+            .branch {
+                display: flex;
+                justify-content: center;
+                align-items: flex-start;
+            }
+
+            /* Optional hover effect */
+            .profile:hover {
+                box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+                border-color: #888;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <div class="tree">
+            <!-- Top Node (Parent) -->
+            <a href="profile.html" class="profile">
+                <img src="" alt="Profile Image">
+                <div>
+                    <div class="name">Tanvir</div>
+                    <div class="id">2231</div>
+                </div>
+            </a>
+
+            <!-- Line connecting the parent to children -->
+            <div class="line"></div>
+
+            <!-- Branch of child nodes -->
+            <div class="branch">
+                <!-- Child 1 -->
+                <div class="sub-tree">
+                    <a href="profile.html" class="profile">
+                        <img src="" alt="Profile Image">
+                        <div>
+                            <div class="name">Rahim</div>
+                            <div class="id">2232</div>
+                        </div>
+                    </a>
+                    <div class="line"></div>
+
+                    <!-- Branch of sub-children -->
+                    <div class="branch">
+                        <a href="profile.html" class="profile">
+                            <img src="" alt="Profile Image">
+                            <div>
+                                <div class="name">Karim</div>
+                                <div class="id">2233</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Child 2 -->
+                <div class="sub-tree">
+                    <a href="profile.html" class="profile">
+                        <img src="" alt="Profile Image">
+                        <div>
+                            <div class="name">Sabbir</div>
+                            <div class="id">2234</div>
+                        </div>
+                    </a>
+                    <div class="line"></div>
+
+                    <!-- Branch of sub-children -->
+                    <div class="branch">
+                        <a href="profile.html" class="profile">
+                            <img src="" alt="Profile Image">
+                            <div>
+                                <div class="name">Shakil</div>
+                                <div class="id">2235</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </body>
+
+</html>

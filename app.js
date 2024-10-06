@@ -154,6 +154,7 @@ if (ImageWrapper) {
 
 
 
+
 const modal = document.querySelector('.modal')
 if (modal) {
     modal.addEventListener('click', () => {
@@ -163,7 +164,6 @@ if (modal) {
         }
     })
 
-
     // search btn
     const searchBtn = document.getElementById('search-btn')
     if (searchBtn) {
@@ -172,6 +172,19 @@ if (modal) {
         })
     }
 }
+
+
+// Close modal button
+const closeBtns = document.querySelectorAll('.modal .close-modal')
+if (closeBtns) {
+    closeBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            modal.classList.remove('active')
+        })
+    })
+}
+
+
 
 
 const paymentMethod = document.querySelector('.payment-method');
@@ -185,4 +198,84 @@ if (paymentMethod) {
             item.classList.toggle('active')
         });
     });
+}
+
+
+
+
+const addBankCart = document.getElementById('add-new-cart')
+if (addBankCart) {
+    addBankCart.addEventListener('click', () => {
+        modal.classList.add('active')
+        modal.innerHTML = `
+                <div class="modal active">
+                <!-- Modal Content -->
+                <div class="modal-content">
+                    <div class="flex-between">
+                        <div class="title mt-1">Add a Payment Method</div>
+                        <button class=" green-color close-modal bg-transfraent fs-xxl"><i
+                                class="fa-solid fa-xmark"></i></button>
+                    </div>
+                    <div class="mt-3 flex-column gap-10">
+                        <input type="text" class="input-control border" placeholder="Card Number">
+                        <div class="flex-between gap-15">
+                            <input type="number" id="expDate" class="input-control border" placeholder="Exp Date">
+                            <input type="number" class="input-control border" placeholder="CVC">
+                        </div>
+                        <input type="text" class="input-control border" placeholder="Card Holder Name">
+                    </div>
+
+                    <!-- Modal Footer -->
+                    <div class="modal-footer d-flex justify-end mt-4 gap-10">
+                        <button class="btn radius-md fw-bold bg-green close-modal"> Close</button>
+                        <button class="btn radius-md fw-bold">Save</button>
+                    </div>
+                </div>
+            </div>
+        `
+        // close modal
+        const closeBtns = document.querySelectorAll('.modal .close-modal')
+        closeBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                modal.classList.remove('active')
+            })
+        })
+    })
+}
+const withdrawButton = document.getElementById('withdraw-btn')
+if (withdrawButton) {
+    withdrawButton.addEventListener('click', () => {
+        modal.classList.add('active')
+        modal.innerHTML = `
+        <!-- Modal -->
+            <div class="modal active">
+                <div class="modal-content">
+                    <div class="flex-between">
+                        <div class="title mt-1">Add Amount</div>
+                        <button class=" green-color close-modal bg-transfraent fs-xxl"><i
+                                class="fa-solid fa-xmark"></i></button>
+                    </div>
+
+                    <div class="mt-3 flex-column gap-10">
+                        <input type="number" class="input-control border" placeholder="Enter Amount">
+                    </div>
+
+                    <!-- Modal Footer -->
+                    <div class="modal-footer d-flex justify-end mt-4 gap-10">
+                        <button class="btn radius-md fw-bold bg-green close-modal"> Close</button>
+                        <button class="btn radius-md fw-bold">Send</button>
+                    </div>
+                </div>
+            </div>
+        `
+
+        // close modal
+        const closeBtns = document.querySelectorAll('.modal .close-modal')
+        closeBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                modal.classList.remove('active')
+            })
+        })
+
+    })
 }
