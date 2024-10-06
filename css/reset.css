@@ -17,11 +17,11 @@ html {
 body {
     font-size: var(--fs-sm);
     font-family: var(--font-montserrat);
-    height: 97dvh;
+    height: 98dvh;
     min-width: 310px;
     width: 98%;
     margin: 0 auto;
-    max-width: 430px;
+    max-width: 440px;
     background-color: var(--white-dark-color);
     display: flex;
     align-items: center;
@@ -116,7 +116,7 @@ h2 {
     background-color: white;
     box-shadow: 2px 4px 12px rgb(181, 179, 179);
     height: 100%;
-    max-width: 430px;
+    max-width: 440px;
     width: 100%;
     min-width: 310px;
     position: relative;
