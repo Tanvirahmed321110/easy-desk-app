@@ -293,7 +293,7 @@ td {
 /*********************
 ****  Search Page  ****
 **********************/
-.tab-buttons {
+.search-page .tab-buttons {
     display: flex;
     align-items: stretch;
     border: 1px solid var(--dark-blue-color);
@@ -301,7 +301,7 @@ td {
     margin-right: 12px;
 }
 
-.tab-buttons .tab-button {
+.search-page .tab-buttons .tab-button {
     width: 50%;
     text-align: center;
     height: 100%;
@@ -309,11 +309,11 @@ td {
 }
 
 
-.tab-buttons .tab-button:first-child {
+.search-page .tab-buttons .tab-button:first-child {
     border-right-width: 0px;
 }
 
-.tab-button.active {
+.search-page .tab-button.active {
     background-color: var(--dark-blue-color);
     color: var(--white-color);
 }
@@ -490,6 +490,21 @@ input:checked+.slider:before {
     visibility: visible;
 }
 
+.modal-content {
+    background-color: var(--white-color);
+    padding: 15px;
+    width: 90%;
+    margin: 0 auto;
+    border-radius: 10px;
+    transform: scale(0);
+    opacity: 0;
+}
+
+.modal.active .modal-content {
+    transform: scale(1);
+    opacity: 1;
+}
+
 .modal.active .modal-content {
     transition: .2s;
     animation: rotateModal .6s linear .2s;
@@ -511,25 +526,17 @@ input:checked+.slider:before {
     }
 
     0% {
-        transform: rotate(0);
         transform: scale(0);
     }
 }
 
-.modal-content {
-    background-color: var(--white-color);
-    padding: 15px;
-    width: 90%;
-    margin: 0 auto;
-    border-radius: 10px;
-}
 
 
 
 
-
-
-
+/*************************
+****  Inquery page  ****
+*************************/
 .inquiry button {
     box-shadow: var(--shadow-2);
     height: 30px;
@@ -571,8 +578,26 @@ input:checked+.slider:before {
     margin: 25px 20px;
 }
 
+.account-inquiry th,
+.account-inquiry td {
+    padding-right: 0;
+}
 
+/* tabs */
+.inquiry-btns button {
+    position: relative;
+    padding: 20px;
+}
 
+.inquiry-btns button.active::after {
+    content: '';
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    height: 3px;
+    width: 106px;
+    background-color: var(--white-color);
+}
 
 /**************************
 ****  Business Tree page  ***
@@ -589,16 +614,19 @@ input:checked+.slider:before {
     align-items: center;
     justify-content: flex-start;
     text-align: left;
-    padding: 10px;
-    border: 2px solid #ccc;
+    /* padding: 10px; */
     border-radius: 10px;
-    width: 180px;
     background-color: #f9f9f9;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
     text-decoration: none;
     color: black;
+    position: relative;
 }
+
+.business-profile-sub .sub-title {
+    line-height: 12px;
+}
+
 
 .business-profile img {
     border: 1px solid var(--white-dark-color);
@@ -606,4 +634,85 @@ input:checked+.slider:before {
     height: 70px;
     border-radius: 50%;
     padding: 2px;
+}
+
+.business-profile-sub {
+    border: 1px solid var(--white-dark-color);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    padding: 2px;
+}
+
+
+.business-profile::after {
+    content: '';
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 20px;
+    width: 2px;
+    background-color: var(--green-color);
+}
+
+.profile-sub {
+    position: relative;
+}
+
+.line-x {
+    position: absolute;
+    top: -15px;
+    left: 25%;
+    transform: translateX(-25%);
+    width: calc(100% - 25%);
+    background-color: var(--green-color);
+    height: 2px;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+.line-x.right-0 {
+    margin-right: 0 !important;
+    top: -15px;
+    left: 5%;
+    transform: translateX(-5%);
+    width: calc(100% - 5%);
+}
+
+.line-x.left-0 {
+    margin-left: 0 !important;
+    top: -15px;
+    left: 0%;
+    transform: translateX(-0%);
+    width: calc(100% - 0%);
+}
+
+
+.line-x::after,
+.line-x::before {
+    content: '';
+    width: 2px;
+    background-color: var(--green-color);
+    height: 15px;
+    position: absolute;
+    bottom: 0;
+    transform: rotate(280deg);
+    transform: translateY(14px);
+}
+
+.line-x::after {
+    left: 0;
+}
+
+.line-x::before {
+    right: 0;
+}
+
+
+.awyad .year {
+    border-bottom: 2px solid var(--green-color);
+    display: inline-block;
+    color: var(--green-color);
+    padding: 0 2px;
 }

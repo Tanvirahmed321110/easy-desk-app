@@ -8,10 +8,10 @@
         <link rel="stylesheet" href="../css/style.css">
     </head>
 
-    <body class=" account-inquiry">
+    <body class=" account-inquiry ">
         <div class="container p-0">
 
-            <div class="update-profile">
+            <div class=" update-profile">
                 <div class="w-100">
 
                     <!-- head -->
@@ -35,89 +35,265 @@
                     <div class="mt-6 page-body  flex-column gap-20">
                         <div>
 
-                            <!-- single tranjection -->
-                            <div class="single-tranjection flex-between gap-20">
-                                <div class="flex-center gap-5">
-                                    <div class="icon-area flex-center">
-                                        <i class="ri-arrow-right-line fs-xl"></i>
-                                    </div>
-                                    <div>
-                                        <div class="sub-title">Other Cost</div>
-                                        <div class="tranjection-id mt-1   green-color">#232323232</div>
+                            <!-- tab buttons -->
+                            <div class="flex-between inquiry-btns gap-10 mt-0 bg-green ">
+                                <button class="white-color active tab-button  p-1" data-target="summery">Summery
+                                </button>
+                                <button class="white-color  tab-button  p-1" data-target="cash-in">Cash In
+                                </button>
+                                <button class="white-color  tab-button  p-1" data-target="cash-out">Cash Out
+                                </button>
+                            </div>
+
+                            <div class="mt-5 flex-column active data-table gap-10" data-target="summery">
+
+                                <!-- cash In -->
+                                <div class="box-wrapper">
+                                    <div class="fs-xxxl px-1 green-color">+</div>
+                                    <!-- table -->
+                                    <div class="table-overfleow has-scrollbar table-wrapper">
+                                        <table class="text-nowrap">
+                                            <thead>
+                                                <tr>
+                                                    <th class="fs-xs">Note</th>
+                                                    <th class="fs-xs text-right">Amount</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <th class="green-color">Cash In</th>
+                                                    <td class="text-right"><i
+                                                            class="fa-solid fa-bangladeshi-taka-sign mr-1"></i>50000
+                                                    </td>
+                                                </tr>
+                                                <tr class="border-none">
+                                                    <th class="green-color">Total </th>
+                                                    <td class="text-right"><i
+                                                            class="fa-solid fa-bangladeshi-taka-sign mr-1"></i>50000
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
                                     </div>
                                 </div>
-                                <div class="right">
-                                    <div class="total fw-bolder green-color"><i
-                                            class="fa-solid fw-bold fa-bangladeshi-taka-sign mr-1"></i>13400</div>
-                                    <div class="date mt-2 gray-color fs-xs">20 Sep 2024</div>
+
+                                <!-- cash out  -->
+                                <div class=" box-wrapper  ">
+                                    <div class="fs-xxxl px-1  green-color">-</div>
+                                    <!-- table -->
+                                    <div class="table-overfleow has-scrollbar table-wrapper">
+                                        <table class="text-nowrap">
+                                            <thead>
+                                                <tr>
+                                                    <th class="fs-xs">Note</th>
+                                                    <th class="fs-xs text-right">Amount</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <th class="green-color">Cash Out</th>
+                                                    <td class="text-right"><i
+                                                            class="fa-solid fa-bangladeshi-taka-sign mr-1"></i>21000
+                                                    </td>
+                                                </tr>
+                                                <tr class="border-none">
+                                                    <th class="green-color">Total </th>
+                                                    <td class="text-right"><i
+                                                            class="fa-solid fa-bangladeshi-taka-sign mr-1"></i>21000
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
                                 </div>
                             </div>
-                            <!-- single tranjection -->
-                            <div class="single-tranjection flex-between gap-20">
-                                <div class="flex-center gap-5">
-                                    <div class="icon-area flex-center">
-                                        <i class="ri-arrow-right-line fs-xl"></i>
+
+
+                            <!-- cash in history -->
+                            <div class=" data-table" data-target="cash-in">
+                                <!-- single tranjection -->
+                                <div class="single-tranjection flex-between mt-50 gap-20">
+                                    <div class="flex-center gap-5">
+                                        <div class="icon-area flex-center">
+                                            <i class="ri-add-line fs-xl"></i>
+                                        </div>
+                                        <div>
+                                            <div class="sub-title">Other Cost</div>
+                                            <div class="tranjection-id mt-1   green-color">#232323232</div>
+                                        </div>
                                     </div>
-                                    <div>
-                                        <div class="sub-title">Other Cost</div>
-                                        <div class="tranjection-id mt-1   green-color">#232323232</div>
+                                    <div class="right">
+                                        <div class="total fw-bolder green-color"><i
+                                                class="fa-solid fw-bold fa-bangladeshi-taka-sign mr-1"></i>13400
+                                        </div>
+                                        <div class="date mt-2 gray-color fs-xs">20 Sep 2024</div>
                                     </div>
                                 </div>
-                                <div class="right">
-                                    <div class="total fw-bolder green-color"><i
-                                            class="fa-solid fw-bold fa-bangladeshi-taka-sign mr-1"></i>13400</div>
-                                    <div class="date mt-2 gray-color fs-xs">20 Sep 2024</div>
+                                <!-- single tranjection -->
+                                <div class="single-tranjection flex-between gap-20">
+                                    <div class="flex-center gap-5">
+                                        <div class="icon-area flex-center">
+                                            <i class="ri-add-line fs-xl"></i>
+                                        </div>
+                                        <div>
+                                            <div class="sub-title">Other Cost</div>
+                                            <div class="tranjection-id mt-1   green-color">#232323232</div>
+                                        </div>
+                                    </div>
+                                    <div class="right">
+                                        <div class="total fw-bolder green-color"><i
+                                                class="fa-solid fw-bold fa-bangladeshi-taka-sign mr-1"></i>13400
+                                        </div>
+                                        <div class="date mt-2 gray-color fs-xs">20 Sep 2024</div>
+                                    </div>
+                                </div>
+                                <!-- single tranjection -->
+                                <div class="single-tranjection flex-between gap-20">
+                                    <div class="flex-center gap-5">
+                                        <div class="icon-area flex-center">
+                                            <i class="ri-add-line fs-xl"></i>
+                                        </div>
+                                        <div>
+                                            <div class="sub-title">Other Cost</div>
+                                            <div class="tranjection-id mt-1   green-color">#232323232</div>
+                                        </div>
+                                    </div>
+                                    <div class="right">
+                                        <div class="total fw-bolder green-color"><i
+                                                class="fa-solid fw-bold fa-bangladeshi-taka-sign mr-1"></i>13400
+                                        </div>
+                                        <div class="date mt-2 gray-color fs-xs">20 Sep 2024</div>
+                                    </div>
+                                </div>
+                                <!-- single tranjection -->
+                                <div class="single-tranjection flex-between gap-20">
+                                    <div class="flex-center gap-5">
+                                        <div class="icon-area flex-center">
+                                            <i class="ri-add-line fs-xl"></i>
+                                        </div>
+                                        <div>
+                                            <div class="sub-title">Other Cost</div>
+                                            <div class="tranjection-id mt-1   green-color">#232323232</div>
+                                        </div>
+                                    </div>
+                                    <div class="right">
+                                        <div class="total fw-bolder green-color"><i
+                                                class="fa-solid fw-bold fa-bangladeshi-taka-sign mr-1"></i>13400
+                                        </div>
+                                        <div class="date mt-2 gray-color fs-xs">20 Sep 2024</div>
+                                    </div>
+                                </div>
+                                <!-- single tranjection -->
+                                <div class="single-tranjection flex-between gap-20">
+                                    <div class="flex-center gap-5">
+                                        <div class="icon-area flex-center">
+                                            <i class="ri-add-line fs-xl"></i>
+                                        </div>
+                                        <div>
+                                            <div class="sub-title">Other Cost</div>
+                                            <div class="tranjection-id mt-1   green-color">#232323232</div>
+                                        </div>
+                                    </div>
+                                    <div class="right">
+                                        <div class="total fw-bolder green-color"><i
+                                                class="fa-solid fw-bold fa-bangladeshi-taka-sign mr-1"></i>13400
+                                        </div>
+                                        <div class="date mt-2 gray-color fs-xs">20 Sep 2024</div>
+                                    </div>
                                 </div>
                             </div>
-                            <!-- single tranjection -->
-                            <div class="single-tranjection flex-between gap-20">
-                                <div class="flex-center gap-5">
-                                    <div class="icon-area flex-center">
-                                        <i class="ri-arrow-right-line fs-xl"></i>
+
+                            <!-- cash out history -->
+                            <div class="data-table " data-target="cash-out">
+                                <!-- single tranjection -->
+                                <div class="single-tranjection flex-between mt-50 gap-20">
+                                    <div class="flex-center gap-5">
+                                        <div class="icon-area flex-center">
+                                            <i class="ri-arrow-right-line fs-xl"></i>
+                                        </div>
+                                        <div>
+                                            <div class="sub-title">Other Cost</div>
+                                            <div class="tranjection-id mt-1   green-color">#232323232</div>
+                                        </div>
                                     </div>
-                                    <div>
-                                        <div class="sub-title">Other Cost</div>
-                                        <div class="tranjection-id mt-1   green-color">#232323232</div>
-                                    </div>
-                                </div>
-                                <div class="right">
-                                    <div class="total fw-bolder green-color"><i
-                                            class="fa-solid fw-bold fa-bangladeshi-taka-sign mr-1"></i>13400</div>
-                                    <div class="date mt-2 gray-color fs-xs">20 Sep 2024</div>
-                                </div>
-                            </div>
-                            <!-- single tranjection -->
-                            <div class="single-tranjection flex-between gap-20">
-                                <div class="flex-center gap-5">
-                                    <div class="icon-area flex-center">
-                                        <i class="ri-arrow-right-line fs-xl"></i>
-                                    </div>
-                                    <div>
-                                        <div class="sub-title">Other Cost</div>
-                                        <div class="tranjection-id mt-1   green-color">#232323232</div>
+                                    <div class="right">
+                                        <div class="total fw-bolder green-color"><i
+                                                class="fa-solid fw-bold fa-bangladeshi-taka-sign mr-1"></i>13400
+                                        </div>
+                                        <div class="date mt-2 gray-color fs-xs">20 Sep 2024</div>
                                     </div>
                                 </div>
-                                <div class="right">
-                                    <div class="total fw-bolder green-color"><i
-                                            class="fa-solid fw-bold fa-bangladeshi-taka-sign mr-1"></i>13400</div>
-                                    <div class="date mt-2 gray-color fs-xs">20 Sep 2024</div>
-                                </div>
-                            </div>
-                            <!-- single tranjection -->
-                            <div class="single-tranjection flex-between gap-20">
-                                <div class="flex-center gap-5">
-                                    <div class="icon-area flex-center">
-                                        <i class="ri-arrow-right-line fs-xl"></i>
+                                <!-- single tranjection -->
+                                <div class="single-tranjection flex-between gap-20">
+                                    <div class="flex-center gap-5">
+                                        <div class="icon-area flex-center">
+                                            <i class="ri-arrow-right-line fs-xl"></i>
+                                        </div>
+                                        <div>
+                                            <div class="sub-title">Other Cost</div>
+                                            <div class="tranjection-id mt-1   green-color">#232323232</div>
+                                        </div>
                                     </div>
-                                    <div>
-                                        <div class="sub-title">Other Cost</div>
-                                        <div class="tranjection-id mt-1   green-color">#232323232</div>
+                                    <div class="right">
+                                        <div class="total fw-bolder green-color"><i
+                                                class="fa-solid fw-bold fa-bangladeshi-taka-sign mr-1"></i>13400
+                                        </div>
+                                        <div class="date mt-2 gray-color fs-xs">20 Sep 2024</div>
                                     </div>
                                 </div>
-                                <div class="right">
-                                    <div class="total fw-bolder green-color"><i
-                                            class="fa-solid fw-bold fa-bangladeshi-taka-sign mr-1"></i>13400</div>
-                                    <div class="date mt-2 gray-color fs-xs">20 Sep 2024</div>
+                                <!-- single tranjection -->
+                                <div class="single-tranjection flex-between gap-20">
+                                    <div class="flex-center gap-5">
+                                        <div class="icon-area flex-center">
+                                            <i class="ri-arrow-right-line fs-xl"></i>
+                                        </div>
+                                        <div>
+                                            <div class="sub-title">Other Cost</div>
+                                            <div class="tranjection-id mt-1   green-color">#232323232</div>
+                                        </div>
+                                    </div>
+                                    <div class="right">
+                                        <div class="total fw-bolder green-color"><i
+                                                class="fa-solid fw-bold fa-bangladeshi-taka-sign mr-1"></i>13400
+                                        </div>
+                                        <div class="date mt-2 gray-color fs-xs">20 Sep 2024</div>
+                                    </div>
+                                </div>
+                                <!-- single tranjection -->
+                                <div class="single-tranjection flex-between gap-20">
+                                    <div class="flex-center gap-5">
+                                        <div class="icon-area flex-center">
+                                            <i class="ri-arrow-right-line fs-xl"></i>
+                                        </div>
+                                        <div>
+                                            <div class="sub-title">Other Cost</div>
+                                            <div class="tranjection-id mt-1   green-color">#232323232</div>
+                                        </div>
+                                    </div>
+                                    <div class="right">
+                                        <div class="total fw-bolder green-color"><i
+                                                class="fa-solid fw-bold fa-bangladeshi-taka-sign mr-1"></i>13400
+                                        </div>
+                                        <div class="date mt-2 gray-color fs-xs">20 Sep 2024</div>
+                                    </div>
+                                </div>
+                                <!-- single tranjection -->
+                                <div class="single-tranjection flex-between gap-20">
+                                    <div class="flex-center gap-5">
+                                        <div class="icon-area flex-center">
+                                            <i class="ri-arrow-right-line fs-xl"></i>
+                                        </div>
+                                        <div>
+                                            <div class="sub-title">Other Cost</div>
+                                            <div class="tranjection-id mt-1   green-color">#232323232</div>
+                                        </div>
+                                    </div>
+                                    <div class="right">
+                                        <div class="total fw-bolder green-color"><i
+                                                class="fa-solid fw-bold fa-bangladeshi-taka-sign mr-1"></i>13400
+                                        </div>
+                                        <div class="date mt-2 gray-color fs-xs">20 Sep 2024</div>
+                                    </div>
                                 </div>
                             </div>
                         </div>

@@ -110,12 +110,9 @@ function tabs() {
 
         tabButtons.forEach(button => {
             button.addEventListener('click', function () {
-                // Remove active class from all buttons
                 tabButtons.forEach(btn => btn.classList.remove('active'));
-                // Add active class to the clicked button
                 this.classList.add('active');
 
-                // Get the target data from the clicked button's data-target attribute
                 const targetData = this.getAttribute('data-target');
 
                 // Hide all tables and show the corresponding table
