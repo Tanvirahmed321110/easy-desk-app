@@ -59,6 +59,7 @@ function date() {
 
 
 
+// notification
 window.onload = function () {
     const notification = document.querySelector('.notification')
     if (notification) {
@@ -152,7 +153,7 @@ if (ImageWrapper) {
 
 
 
-const modal = document.querySelector('.modal')
+let modal = document.querySelector('.modal')
 if (modal) {
     modal.addEventListener('click', () => {
         const modalContent = modal.querySelector('.modal-content');
@@ -209,18 +210,39 @@ if (addBankCart) {
                 <!-- Modal Content -->
                 <div class="modal-content">
                     <div class="flex-between">
-                        <div class="title mt-1">Add a Payment Method</div>
+                        <div class="title mt-1">Add a Bank Account</div>
                         <button class=" green-color close-modal bg-transfraent fs-xxl"><i
                                 class="fa-solid fa-xmark"></i></button>
                     </div>
-                    <div class="mt-3 flex-column gap-10">
-                        <input type="text" class="input-control border" placeholder="Card Number">
-                        <div class="flex-between gap-15">
-                            <input type="number" id="expDate" class="input-control border" placeholder="Exp Date">
-                            <input type="number" class="input-control border" placeholder="CVC">
+
+                    <!-- bank list -->
+                        <div class="mt-4">
+                            <label for="bank-list" class="blue-color fw-bold">Bank List</label>
+                            <select class="input-control mt-1 border" name="" id="bank-list">
+                                <option value="">Dutch Bangla</option>
+                                <option value="">Sonali Bank</option>
+                                <option value="">Islami Bank</option>
+                                <option value="">UCB Bank</option>
+                                <option value="">Rupali Bank</option>
+                            </select>
                         </div>
-                        <input type="text" class="input-control border" placeholder="Card Holder Name">
-                    </div>
+
+                    <input type="text" class="input-control border mt-4" placeholder="Bank Account Number">
+
+                        <!-- Branch list -->
+                        <div class="mt-4">
+                            <label class="blue-color fw-bold" for="brance-list">Branch List</label>
+                            <select class="input-control mt-1 border" name="" id="brance-list">
+                                <option value="">Bashabo Sub Branch</option>
+                                <option value="">Babu Bazar Sub Branch</option>
+                                <option value="">Kamrangirchor Sub Branch</option>
+                                <option value="">Jatrabari Sub Branch</option>
+                                <option value="">Nandipara Sub Branch</option>
+                                <option value="">Bhashantek Sub Branch</option>
+                            </select>
+                        </div>
+
+                        <input type="number" class="input-control border mt-4" placeholder="Routing Number">
 
                     <!-- Modal Footer -->
                     <div class="modal-footer d-flex justify-end mt-4 gap-10">
@@ -267,12 +289,135 @@ if (withdrawButton) {
         `
 
         // close modal
-        const closeBtns = document.querySelectorAll('.modal .close-modal')
-        closeBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                modal.classList.remove('active')
-            })
-        })
+        closeModal()
 
     })
+}
+
+
+
+
+const transferTakaBtn = document.getElementById('transfer-taka-btn');
+if (transferTakaBtn) {
+
+    transferTakaBtn.addEventListener('click', () => {
+        modal.classList.add('active')
+        const modalContent = document.querySelector('.modal .modal-content')
+
+
+
+        // Add modal content
+        modalContent.innerHTML = `
+            <div class="flex-between">
+                <div class="title mt-1">Enter your PIN</div>
+                <button class="green-color close-modal bg-transparent fs-xxl"><i
+                        class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="mt-3 flex-column gap-10">
+                <input type="password" class="input-control border" placeholder="Enter PIN">
+                <button class="btn fw-bold bg-green w-100"
+                    onclick="window.location.href='./transfer-taka.html'">Confirm</button>
+            </div>
+        `;
+
+        closeModal()
+    });
+}
+
+
+
+
+// transfer taka next button
+const transferTakaNext = document.getElementById('transfer-taka-next')
+if (transferTakaNext) {
+
+    const modalContent = document.querySelector('.modal .modal-content')
+    modalContent.innerHTML = `
+            <div class="flex-between input-search-area  gap-20 mt-4 px-2">
+                <input class=" input-control" id="customer-id-input" type="text" placeholder="Enter Transfer Account">
+                <button class="search-btn btn radius-sm"><i class="ri-search-2-line"></i></button>
+            </div>
+
+            <div class="profile-area"></div>
+
+            <!-- Modal Footer -->
+            <div class="modal-footer d-flex justify-end mt-4 gap-10">
+                <button class="btn radius-md fw-bold bg-green close-modal"> Cancel</button>
+                <button disabled class="btn radius-md disable fw-bold" id="disable-btn">Transfer</button>
+            </div>
+        `
+
+    transferTakaNext.addEventListener('click', () => {
+        const amountInput = document.querySelector('#transferAmount').value
+        const noteInput = document.querySelector('#Description').value
+
+        if (amountInput !== '' || noteInput !== '') {
+            modal.classList.add('active')
+        }
+    })
+
+    const inputField = document.getElementById('customer-id-input');
+    const disableBtn = document.getElementById('disable-btn');
+    const profileArea = document.querySelector('.profile-area');
+
+
+    // Add an event listener to the input field to check for changes
+    inputField.addEventListener('input', () => {
+        const inputValue = inputField.value;
+        if (inputValue.length >= 6) {
+            disableBtn.removeAttribute('disabled');
+            disableBtn.classList.remove('disable');
+            disableBtn.classList.add('bg-blue');
+
+            if (!profileArea.innerHTML) {  // Prevent multiple additions
+                profileArea.innerHTML = `
+                    <div class="profile d-flex justify-start align-center  gap-15">
+                        <img src="https://img.freepik.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg"
+                            alt="" class="profile-img">
+                        <div>
+                            <div class="name sub-title">Md Tanvir Ahmed</div>
+                            <div class="post blue-color fs-xs mt-n-1">General Manager</div>
+                            <div class="sub-table green-color mt-1">ID: 2345</div>
+                        </div>
+                    </div>
+                `;
+            }
+
+            disableBtn.addEventListener('click', () => {
+                const notification = document.createElement('div')
+
+                notification.innerHTML = `
+                <div class=" flex-center gap-10">
+                    <img class="width-50" src = "../image/checked.png" alt = ""> Successfully Transfer
+                </div>
+                `
+                notification.classList.add('notification')
+                document.querySelector('body').appendChild(notification)
+
+                setTimeout(() => {
+                    notification.classList.add('active');
+                }, 10);
+                setTimeout(() => {
+                    notification.classList.remove('active');
+                    document.querySelector('body').removeChild(notification);
+                }, 3000);
+
+            })
+        } else {
+            disableBtn.setAttribute('disabled', true);
+            disableBtn.classList.add('disable');
+            profileArea.innerHTML = ''
+        }
+    });
+    closeModal()
+}
+
+
+
+// close modal
+function closeModal() {
+    const closeModalBtn = modal.querySelector('.close-modal');
+    closeModalBtn.addEventListener('click', () => {
+        modal.classList.remove('active')
+    });
 }

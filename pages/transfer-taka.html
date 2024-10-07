@@ -41,33 +41,24 @@
                                     <i class="fa-solid fw-bold fa-bangladeshi-taka-sign mr-1"></i>
                                     <div class="letter-space-1 ">45000.00</div>
                                 </div>
+                                <div class="mt-6 text-center">Available for withdraw</div>
                             </div>
 
-                            <div class="mx-4">
+                            <div class=" mx-4">
                                 <form action="#">
-                                    <div class="mt-6">
-                                        <label for="recipientAccount" class="form-label gray-color ">Recipient
-                                            Account
-                                            Number</label>
-                                        <input type="text" class="input-control border mt-1" id="recipientAccount"
-                                            placeholder="Enter recipient account number" required>
-                                    </div>
-
                                     <!-- Amount -->
                                     <div class="mt-4">
-                                        <label for="transferAmount" class="gray-color">Amount (Taka)</label>
-                                        <input type="number" class="input-control mt-1 border" id="transferAmount"
-                                            placeholder="Enter amount to transfer" required>
+                                        <input type="number" class="input-control mt-1 " id="transferAmount"
+                                            placeholder="Enter amount " required>
                                     </div>
                                     <!-- Amount -->
                                     <div class="mt-4">
-                                        <label for="Description" class="gray-color">Description</label>
-                                        <input type="number" class="input-control mt-1 border" id="Description"
-                                            placeholder="Description" required>
+                                        <textarea class="input-control mt-1 " id="Description" placeholder="Note"
+                                            required></textarea>
                                     </div>
                                     <div class="mt-4">
-                                        <button type="submit" class="btn btn-primary w-100 fw-bold">Transfer
-                                            Now</button>
+                                        <button type="submit" id="transfer-taka-next"
+                                            class="btn btn-primary w-100 fw-bold">Next</button>
                                     </div>
                                 </form>
                             </div>
@@ -75,6 +66,21 @@
                     </div>
                 </div>
             </div>
+
+
+
+            <!-- Modal -->
+            <div class="modal ">
+                <!-- Modal Content -->
+                <div class="modal-content">
+                    <div class="profile-area d-none">
+
+                    </div>
+                </div>
+            </div>
+
+
+
 
 
 
@@ -95,6 +101,9 @@
                     <i style="font-size: 40px;" class="ri-arrow-right-s-fill "></i>
                 </a>
             </div>
+
+
+
 
 
 
