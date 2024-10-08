@@ -160,7 +160,6 @@
 
 table {
     border-collapse: collapse;
-    max-width: 500px;
     width: 100%;
     overflow-x: auto;
     margin: 0 auto;
@@ -190,7 +189,6 @@ td {
     color: var(--green-color);
     font-weight: var(--fw-500);
 }
-
 
 
 
@@ -253,10 +251,15 @@ td {
     height: 135px;
 }
 
+.head.head-center {
+    justify-content: flex-start !important;
+    align-items: center;
+}
+
 /* page body */
 .page-body {
     margin-top: 100px;
-    overflow: auto;
+    overflow-y: auto;
     height: calc(100vh - 200px);
     padding-bottom: 60px;
 }
@@ -749,4 +752,17 @@ input:checked+.slider:before {
     display: inline-block;
     color: var(--green-color);
     padding: 0 2px;
+}
+
+
+
+
+
+/***********************
+****  Booking Money  ***
+***********************/
+.report-pannel-table {
+    /* margin-top: -14px; */
+    background-color: rebeccapurple;
+    height: 200px;
 }
