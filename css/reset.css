@@ -21,7 +21,7 @@ body {
     min-width: 310px;
     width: 98%;
     margin: 0 auto;
-    max-width: 440px;
+    max-width: 460px;
     background-color: var(--white-dark-color);
     display: flex;
     align-items: center;
@@ -31,7 +31,7 @@ body {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    border-radius: 45px;
+    border-radius: 25px;
     overflow: hidden;
     z-index: 12;
     font-weight: var(--fw-500);
@@ -113,11 +113,11 @@ h2 {
 .container {
     padding: 20px 16px;
     margin: 0px auto;
-    border-radius: 45px;
+    border-radius: 25px;
     background-color: white;
     box-shadow: 2px 4px 12px rgb(181, 179, 179);
     height: 100%;
-    max-width: 440px;
+    max-width: 460px;
     width: 100%;
     min-width: 310px;
     position: relative;
@@ -348,6 +348,11 @@ h2 {
 
 .bg-white-off {
     background-color: var(--white-off);
+}
+
+.border-bottom {
+    display: inline-block;
+    /* border-bottom: 2px solid var(--green-color); */
 }
 
 /*_____  Padding  _____*/

@@ -136,6 +136,10 @@
 
 
 /* profile data */
+.create-pin .profile-data {
+    width: 300px;
+}
+
 .profile-data .border-left {
     border-left: 2px solid var(--orange-color);
     padding-left: 5px;
@@ -199,8 +203,8 @@ td {
     position: fixed;
     bottom: 0;
     left: 0;
-    border-bottom-left-radius: 45px;
-    border-bottom-right-radius: 45px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
     width: 100%;
     background-color: var(--dark-blue-color);
     padding: 20px 30px;
@@ -235,20 +239,21 @@ td {
     width: 100%;
     height: 100px;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: space-between !important;
     z-index: 4;
     background-color: var(--white-off-color);
-    border-top-right-radius: 45px;
-    border-top-left-radius: 45px;
-    padding: 0 19px;
-    padding-top: 20px;
+    border-top-right-radius: 25px;
+    border-top-left-radius: 25px;
+    padding: 0 15px;
+    padding-top: 10px;
 }
 
 .home-page.main .head {
     padding: 0 12px;
-    padding-top: 24px;
+    padding-top: 30px;
     height: 135px;
+    align-items: flex-start;
 }
 
 .head.head-center {
@@ -438,7 +443,7 @@ td {
 .switch {
     position: relative;
     display: inline-block;
-    width: 50px;
+    width: 49px;
     height: 20px;
 }
 
@@ -463,9 +468,9 @@ td {
 .slider:before {
     position: absolute;
     content: "";
-    height: 20px;
-    width: 20px;
-    left: 4px;
+    height: 19px;
+    width: 19px;
+    left: 2px;
     bottom: 1px;
     background-color: var(--white-color);
     transition: 0.4s;
@@ -509,13 +514,13 @@ input:checked+.slider:before {
     top: 0;
     left: 0;
     width: 100%;
-    height: 97vh;
+    height: 98vh;
     background-color: rgba(0, 0, 0, 0.3);
     display: none;
     align-items: center;
     justify-content: center;
     z-index: 4;
-    border-radius: 45px;
+    border-radius: 25px;
     transition: .2s;
     opacity: 0;
     visibility: hidden;
@@ -571,9 +576,13 @@ input:checked+.slider:before {
 
 
 
-/*************************
+/***********************
 ****  Inquery page  ****
-*************************/
+***********************/
+.account-inquiry .box-wrapper {
+    margin: 10px;
+}
+
 .inquiry button {
     box-shadow: var(--shadow-2);
     height: 30px;
@@ -583,13 +592,11 @@ input:checked+.slider:before {
     align-items: center;
     justify-content: center;
     border-radius: 4px;
-    background-color: rgba(0, 0, 0, 0.2);
-    border: 1px solid var(--dark-blue-color);
 }
 
 .account-inquiry .icon-area {
-    height: 45px;
-    width: 45px;
+    height: 50px;
+    width: 50px;
     border-radius: 50%;
     background-color: var(--sky-blue-color);
     background-color: var(--orange-color);
@@ -597,10 +604,39 @@ input:checked+.slider:before {
 }
 
 .account-inquiry .single-tranjection {
-    padding: 14px 15px;
+    padding: 16px 15px;
+    padding-bottom: 8px;
     border-bottom: 1px solid var(--white-off-color);
     box-shadow: var(--shadow-2);
 }
+
+.account-inquiry .single-tranjection .note {
+    width: calc(100% - 60px);
+    border-top: 1px solid var(--white-off-color);
+    padding: 1px 0;
+    font-weight: 500;
+    margin-left: 60px;
+    margin-top: 5px !important;
+}
+
+.inquiry-btns {
+    position: fixed;
+    top: 100px;
+    left: 0;
+    width: 100%;
+}
+
+.fixed-total {
+    position: fixed;
+    bottom: 80px;
+    border-top: 1px solid var(--orange-color);
+    left: 0px;
+    width: calc(100% - 0px);
+    padding: 10px 25px;
+    background-color: var(--green-color);
+
+}
+
 
 .payment-method .single-payment {
     padding: 10px 8px;
@@ -635,6 +671,10 @@ input:checked+.slider:before {
     width: 106px;
     background-color: var(--white-color);
 }
+
+
+
+
 
 /**************************
 ****  Business Tree page  ***
