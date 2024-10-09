@@ -58,7 +58,7 @@ button:active {
 
 p {
     font-size: var(--fs-md);
-    line-height: 28px;
+    line-height: 22px;
 }
 
 img {
@@ -349,6 +349,10 @@ input:focus {
 
 .bg-white {
     background-color: var(--white-color);
+}
+
+.bg-white-off {
+    background-color: var(--white-off-color) !important;
 }
 
 .bg-green {
