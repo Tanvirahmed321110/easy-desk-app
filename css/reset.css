@@ -17,11 +17,11 @@ html {
 body {
     font-size: var(--fs-sm);
     font-family: var(--font-montserrat);
-    height: 98dvh;
+    height: 100dvh;
     min-width: 310px;
-    width: 98%;
+    width: 99%;
     margin: 0 auto;
-    max-width: 460px;
+    max-width: 500px;
     background-color: var(--white-dark-color);
     display: flex;
     align-items: center;
@@ -31,11 +31,10 @@ body {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    border-radius: 25px;
+    border-radius: 0px;
     overflow: hidden;
     z-index: 12;
     font-weight: var(--fw-500);
-    /* overflow-y: auto; */
 }
 
 ul {
@@ -77,6 +76,11 @@ select {
     outline: none;
 }
 
+input:focus,
+textarea:focus,
+select:focus {
+    outline: 1px solid var(--orange-color)
+}
 
 textarea {
     resize: none;
@@ -113,16 +117,15 @@ h2 {
 .container {
     padding: 20px 16px;
     margin: 0px auto;
-    border-radius: 25px;
+    border-radius: 0px;
     background-color: white;
     box-shadow: 2px 4px 12px rgb(181, 179, 179);
     height: 100%;
-    max-width: 460px;
+    max-width: 500px;
     width: 100%;
     min-width: 310px;
     position: relative;
     overflow: hidden;
-    overflow-y: auto;
 }
 
 
@@ -172,14 +175,23 @@ h2 {
     border: 1px solid var(--white-dark-color);
 }
 
+input:focus {
+    border-color: var(--sky-blue-color);
+}
+
 .input-control::placeholder {
     color: var(--gray-color);
     opacity: .5;
 }
 
-/* height */
+
+/*_____  height  _____*/
 .h-100 {
     height: 100%;
+}
+
+.h-50 {
+    height: 50%;
 }
 
 /* Width */
@@ -326,6 +338,7 @@ h2 {
 }
 
 
+/*_____ Bg Color _____ */
 .bg-blue {
     background-color: var(--dark-blue-color) !important;
 }
@@ -350,10 +363,6 @@ h2 {
     background-color: var(--white-off);
 }
 
-.border-bottom {
-    display: inline-block;
-    /* border-bottom: 2px solid var(--green-color); */
-}
 
 /*_____  Padding  _____*/
 .p-0 {
@@ -364,18 +373,6 @@ h2 {
     padding: 5;
 }
 
-.pl-0 {
-    padding-left: 0;
-}
-
-.pl-2 {
-    padding-left: 10px;
-}
-
-.pr-2 {
-    padding-right: 10px;
-}
-
 .p-2 {
     padding: 10px;
 }
@@ -383,6 +380,35 @@ h2 {
 .p-3 {
     padding: 15px;
 }
+
+.p-4 {
+    padding: 20px;
+}
+
+.pl-0 {
+    padding-left: 0;
+}
+
+.pl-1 {
+    padding-left: 5px;
+}
+
+.pl-2 {
+    padding-left: 10px;
+}
+
+.pr-0 {
+    padding-right: 0px;
+}
+
+.pr-1 {
+    padding-right: 5px;
+}
+
+.pr-2 {
+    padding-right: 10px;
+}
+
 
 .px-1 {
     padding: 0 5px;
@@ -400,6 +426,17 @@ h2 {
     padding: 0 20px;
 }
 
+.py-1 {
+    padding: 5px 0;
+}
+
+.py-2 {
+    padding: 10px 0;
+}
+
+.py-3 {
+    padding: 15px 0;
+}
 
 .py-4 {
     padding: 20px 0;
@@ -409,6 +446,10 @@ h2 {
 /*_____  Margin  _____*/
 .mt-n-1 {
     margin-top: -3px;
+}
+
+.m-0 {
+    margin: 0;
 }
 
 .mt-0 {
@@ -447,14 +488,6 @@ h2 {
     margin-top: 50px;
 }
 
-.my-50 {
-    margin: 50px 0;
-}
-
-.mx-4 {
-    margin: 0 20px !important;
-}
-
 .mt-100 {
     margin-top: 100px;
 }
@@ -463,16 +496,88 @@ h2 {
     margin-top: 140px;
 }
 
-.mb-2 {
-    margin-bottom: 10px;
-}
-
+/* Margin Y */
 .my-4 {
     margin: 20px 0;
 }
 
+.my-3 {
+    margin: 15px 0;
+}
+
+.my-2 {
+    margin: 10px 0;
+}
+
+.my-1 {
+    margin: 5px 0;
+}
+
+.my-50 {
+    margin: 50px 0;
+}
+
+
+/* Margin X */
+.mx-0 {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.mx-1 {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.mx-2 {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.mx-3 {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.mx-4 {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+
+/* Margin  */
+.mb-1 {
+    margin-bottom: 5px;
+}
+
+.mb-2 {
+    margin-bottom: 10px;
+}
+
+.mb-3 {
+    margin-bottom: 15px;
+}
+
+.mb-4 {
+    margin-bottom: 20px;
+}
+
+
+
 .mr-1 {
-    margin-right: 4px;
+    margin-right: 5px;
+}
+
+.mr-2 {
+    margin-right: 10px;
+}
+
+.mr-3 {
+    margin-right: 15px;
+}
+
+.mr-4 {
+    margin-right: 20px;
 }
 
 .ml-1 {
@@ -482,6 +587,16 @@ h2 {
 .ml-2 {
     margin-left: 10px;
 }
+
+.ml-3 {
+    margin-left: 15px;
+}
+
+.ml-4 {
+    margin-left: 20px;
+}
+
+
 
 /*  Font Class  */
 .fs-xs {

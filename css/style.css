@@ -3,9 +3,6 @@
 
 
 
-.logo img {
-    width: 250px;
-}
 
 .profile-img {
     width: 100px;
@@ -49,6 +46,24 @@
     box-shadow: var(--shadow-1);
 }
 
+
+.main-logo {
+    width: 120px;
+}
+
+.main-logo-big {
+    width: 150px;
+}
+
+.main-logo-sm {
+    width: 100px;
+}
+
+.box-wrapper-2 {
+    min-width: 290px;
+    margin: 0 auto !important;
+    padding: 30px !important;
+}
 
 /*********************
 ****  Login Page  ****
@@ -96,20 +111,17 @@
 
 
 
-/*********************
+/********************
 ****  Home Page  ****
-**********************/
+*********************/
 .home .container {
     background-color: var(--white-color);
 }
 
 .home .right {
-    width: 180px;
+    /* width: 180px; */
 }
 
-.home-page .logo img {
-    width: 200px;
-}
 
 .home-page .box {
     border: 1px solid var(--white-off-color);
@@ -203,8 +215,8 @@ td {
     position: fixed;
     bottom: 0;
     left: 0;
-    border-bottom-left-radius: 25px;
-    border-bottom-right-radius: 25px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
     width: 100%;
     background-color: var(--dark-blue-color);
     padding: 20px 30px;
@@ -237,22 +249,30 @@ td {
     top: -20px;
     left: 0PX;
     width: 100%;
-    height: 100px;
+    height: 130px;
     display: flex;
     align-items: center;
     justify-content: space-between !important;
     z-index: 4;
     background-color: var(--white-off-color);
-    border-top-right-radius: 25px;
-    border-top-left-radius: 25px;
+    border-top-right-radius: 0px;
+    border-top-left-radius: 0px;
     padding: 0 15px;
-    padding-top: 10px;
+    padding-top: 14px;
+}
+
+.head.sm-head {
+    height: 100px;
+}
+
+.mt-n-30 {
+    margin-top: -30px;
 }
 
 .home-page.main .head {
     padding: 0 12px;
-    padding-top: 30px;
-    height: 135px;
+    padding-top: 20px;
+    height: 140px;
     align-items: flex-start;
 }
 
@@ -277,6 +297,10 @@ td {
     box-shadow: var(--shadow-1);
     background-color: var(--white-color);
     margin: 0px 7px;
+}
+
+.menu-page .box-wrapper {
+    padding: 20px 11px;
 }
 
 .page-body::-webkit-scrollbar {
@@ -357,6 +381,7 @@ td {
 
 .data-table {
     display: none;
+    padding-bottom: 40px;
 }
 
 .data-table.active {
@@ -432,6 +457,10 @@ td {
     height: 75px;
     padding: 2px;
     border: 1px solid var(--white-dark-color);
+}
+
+.myprofile-page .box-wrapper {
+    margin: 0 15px;
 }
 
 
@@ -520,7 +549,7 @@ input:checked+.slider:before {
     align-items: center;
     justify-content: center;
     z-index: 4;
-    border-radius: 25px;
+    border-radius: 0px;
     transition: .2s;
     opacity: 0;
     visibility: hidden;
@@ -551,6 +580,8 @@ input:checked+.slider:before {
     transition: .2s;
     animation: rotateModal .6s linear .2s;
 }
+
+
 
 @keyframes rotateModal {
     0% {
