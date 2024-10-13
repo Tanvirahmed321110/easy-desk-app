@@ -223,6 +223,10 @@ td {
     color: var(--white-color);
 }
 
+.contact-us.footer {
+    padding: 15px 30px;
+}
+
 .right-btn,
 .footer .right-btn,
 .head .right-btn {
@@ -236,9 +240,9 @@ td {
 
 
 
-/*********************
+/********************
 ****  Menu Page  ****
-**********************/
+*********************/
 .menu-page .container {
     padding: 20px 0;
 }
@@ -840,4 +844,71 @@ input:checked+.slider:before {
 
 .about-developer .page-body {
     padding-bottom: 130px;
+}
+
+
+
+.box .notification-img {
+    position: relative;
+}
+
+.box .notification-img .base {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: var(--green-color);
+    color: white;
+    position: absolute;
+    right: 12px;
+    top: -6px;
+    font-size: var(--fs-xs);
+}
+
+
+
+
+
+
+
+/********************
+****  Office Notice  ****
+*********************/
+.single-notice {
+    position: relative;
+}
+
+.single-notice .base {
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 2px 4px;
+    background-color: var(--orange-color);
+    font-size: 11px;
+    color: var(--white-color);
+    border-top-left-radius: 12px;
+}
+
+.single-notice .left {
+    min-width: 50px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    /* border: 1px solid var(--white-dark-color); */
+    background-color: var(--white-off-color);
+}
+
+.single-notice .date {
+    position: relative;
+    margin-right: 10px;
+}
+
+.single-notice .date::after {
+    content: '';
+    position: absolute;
+    right: -12px;
+    top: 2px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: var(--green-color);
 }
