@@ -862,6 +862,7 @@ input:checked+.slider:before {
     right: 12px;
     top: -6px;
     font-size: var(--fs-xs);
+    animation: bounceSmall .2s ease-in-out infinite;
 }
 
 
@@ -870,9 +871,9 @@ input:checked+.slider:before {
 
 
 
-/********************
+/************************
 ****  Office Notice  ****
-*********************/
+*************************/
 .single-notice {
     position: relative;
 }
@@ -886,14 +887,47 @@ input:checked+.slider:before {
     font-size: 11px;
     color: var(--white-color);
     border-top-left-radius: 12px;
+    animation: bounce 2s ease-in-out infinite;
 }
+
+@keyframes bounce {
+    0% {
+        transform: translateY(-20px) scale(0.9);
+        opacity: 0.5;
+    }
+
+    50% {
+        transform: translateY(0px) scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-20px) scale(0.9);
+        opacity: 0.5;
+    }
+}
+
+@keyframes bounceSmall {
+    0% {
+        transform: translateY(1px)
+    }
+
+    50% {
+        transform: translateY(0px)
+    }
+
+    100% {
+        transform: translateY(1px)
+    }
+}
+
+
 
 .single-notice .left {
     min-width: 50px;
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    /* border: 1px solid var(--white-dark-color); */
     background-color: var(--white-off-color);
 }
 

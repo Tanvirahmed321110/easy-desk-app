@@ -179,6 +179,10 @@ input:focus {
     border-color: var(--sky-blue-color);
 }
 
+input[type="checkbox"]:focus {
+    outline-color: none;
+}
+
 .input-control::placeholder {
     color: var(--gray-color);
     opacity: .5;
